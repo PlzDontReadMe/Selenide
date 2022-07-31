@@ -14,7 +14,6 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class DeliveryCardTest {
-
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
     String minDate = LocalDate.now().plusDays(3).format(formatter);
 
@@ -22,6 +21,7 @@ public class DeliveryCardTest {
     @Test
     public void shouldDeliveryCard() {
         Configuration.holdBrowserOpen = true;
+        Configuration.headless = true;
         open("http://localhost:7777/");
         $("[placeholder=\"Город\"]").val("Ижевск");
         $("[placeholder=\"Дата встречи\"]").val(minDate);

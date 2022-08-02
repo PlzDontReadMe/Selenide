@@ -22,7 +22,7 @@ public class DeliveryCardTest {
     public void shouldDeliveryCard() {
         Configuration.holdBrowserOpen = true;
         Configuration.headless = true;
-        open("http://localhost:7777/");
+        open("http://localhost:9999/");
         $("[placeholder=\"Город\"]").val("Ижевск");
         $("[placeholder=\"Дата встречи\"]").val(minDate);
         $(byName("name")).val("Александр Иванов-Иванов");
